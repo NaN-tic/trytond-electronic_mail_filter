@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- This file is part of electronic_mail_filter module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Electronic Mail Filter">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="model"/>
+    <field name="model"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="template"/>
+    <field name="template"/>
+    <label name="last_send"/>
+    <field name="last_send"/>
+    <notebook colspan="4">
+        <page string="Profile" id="profile">
+            <field name="profile" colspan="4"/>
+            <button name="test_profile" string="Test Profile"
+                icon="tryton-preferences"/>
+            <button name="send_emails" string="Send emails"
+                icon="tryton-mail-message"/>
+        </page>
+        <page string="Cron" id="cron">
+            <label name="cron"/>
+            <field name="cron"/>
+            <group colspan="2" col="2" id="buttons">
+                <button name="create_cron" string="Create Cron"
+                    icon="tryton-new"
+                    confirm="Are you sure to create the cron?"/>
+                <button name="delete_cron" string="Delete Cron"
+                    icon="tryton-close"
+                    confirm="Are you sure to delete the cron?"/>
+            </group>
+        </page>
+    </notebook>
+</form>

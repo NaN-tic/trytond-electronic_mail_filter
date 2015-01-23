@@ -1,0 +1,184 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:electronic.mail.filter:"
+msgid ""
+"Details:\n"
+"%s"
+msgstr ""
+"Detalls:\n"
+"%s"
+
+msgctxt "error:electronic.mail.filter:"
+msgid "Filter ended without errors, but do not obtained any records."
+msgstr ""
+"El filtratge a finalitzat sense errors, però no ha obtingut cap registre."
+
+msgctxt "error:electronic.mail.filter:"
+msgid ""
+"Filter obtained these records:\n"
+"%s"
+msgstr ""
+"El filtre ha obtingut aquests registres:\n"
+"%s"
+
+msgctxt "error:electronic.mail.filter:"
+msgid ""
+"Manual filter error:\n"
+"%s"
+msgstr ""
+"Error de filtre manual:\n"
+"%s"
+
+msgctxt "field:electronic.mail.filter,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:electronic.mail.filter,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:electronic.mail.filter,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:electronic.mail.filter,cron:"
+msgid "Cron"
+msgstr "Planificador"
+
+msgctxt "field:electronic.mail.filter,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:electronic.mail.filter,last_send:"
+msgid "Last Send"
+msgstr "Darrer enviat"
+
+msgctxt "field:electronic.mail.filter,manual:"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "field:electronic.mail.filter,mix_operator:"
+msgid "Mix operator"
+msgstr "Barreja operador"
+
+msgctxt "field:electronic.mail.filter,model:"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "field:electronic.mail.filter,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:electronic.mail.filter,profile:"
+msgid "Profile"
+msgstr "Perfil de cerca"
+
+msgctxt "field:electronic.mail.filter,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:electronic.mail.filter,source:"
+msgid "Source"
+msgstr "Origen"
+
+msgctxt "field:electronic.mail.filter,template:"
+msgid "eMail Template"
+msgstr "Filtre de correu electrònic"
+
+msgctxt "field:electronic.mail.filter,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:electronic.mail.filter,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:electronic.mail.template,reply_to:"
+msgid "Reply To"
+msgstr "Respondre a"
+
+msgctxt "help:electronic.mail.filter,mix_operator:"
+msgid ""
+"Operator to mix the records obtained through the filters in the first tab "
+"and records calculated by the manual code."
+msgstr ""
+"Operador per barrejar els registres obtinguts a través del filtre de la "
+"primera pestanya i els registres calculats pel codi manualment."
+
+msgctxt "help:electronic.mail.filter,name:"
+msgid "Name of the cron for sending Email."
+msgstr "Nom del planificador per enviar correus electrònics."
+
+msgctxt "help:electronic.mail.filter,source:"
+msgid ""
+"Available global variables:\n"
+"\tself: Instance of this model.\n"
+"\tpool: Instance of Pool that allows get access to any model of database."
+"Returns `records`: List of records you want to select."
+msgstr ""
+"Variables globals disponibles:\n"
+"\tself: Instància d'aquest model.\n"
+"\tpool: Instància del Pool que permet accedir a qualsevol model de la base de dades.\n"
+"Retorna `records`: Llista de registres que voleu seleccionar."
+
+msgctxt "model:electronic.mail.filter,name:"
+msgid "eMail Filter"
+msgstr "Filtre de correu electrònic"
+
+msgctxt "model:ir.action,name:action_electronic_mail_filter"
+msgid "Electronic Mail Filters"
+msgstr "Filtres de correu electrònic"
+
+msgctxt "model:ir.ui.menu,name:menu_electronic_mail_filter"
+msgid "Electronic Mail Filters"
+msgstr "Filtres de correu electrònic"
+
+msgctxt "selection:electronic.mail.filter,mix_operator:"
+msgid "All"
+msgstr "Tots"
+
+msgctxt "selection:electronic.mail.filter,mix_operator:"
+msgid "Any"
+msgstr "Qualsevol"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Are you sure to create the cron?"
+msgstr "Esteu segur que voleu crear el planificador?"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Are you sure to delete the cron?"
+msgstr "Esteu segur que voleu esborrar el planificador?"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Create Cron"
+msgstr "Crea planificacor"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Cron"
+msgstr "Planificador"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Delete Cron"
+msgstr "Esborra planificador"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Electronic Mail Filter"
+msgstr "Filtre de correu electrònic"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Electronic Mail Filters"
+msgstr "Filtres de correu electrònic"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Profile"
+msgstr "Perfil de cerca"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Send emails"
+msgstr "Envia correus electrònics"
+
+msgctxt "view:electronic.mail.filter:"
+msgid "Test Profile"
+msgstr "Prova el perfil"

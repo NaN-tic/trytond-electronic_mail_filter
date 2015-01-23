@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- This file is part of electronic_mail_filter module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/field[@name='language']"
+            position="after">
+        <label name="single_email"/>
+        <field name="single_email"/>
+    </xpath>
+</data>
