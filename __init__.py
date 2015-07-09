@@ -3,10 +3,12 @@
 # copyright notices and license terms.
 from trytond.pool import Pool
 from .electronic_mail import *
+from .template import *
 
 
 def register():
     Pool.register(
         ElectronicMailFilter,
         SearchingStart,
+        Template,
         module='electronic_mail_filter', type_='model')

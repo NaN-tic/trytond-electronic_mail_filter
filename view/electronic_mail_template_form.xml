@@ -3,9 +3,10 @@
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
 <data>
-    <xpath expr="/form/field[@name='language']"
-            position="after">
-        <label name="single_email"/>
-        <field name="single_email"/>
+    <xpath expr="/form/notebook/page[@id='advanced']" position="after">
+        <page string="Filters" id="filters">
+            <label name="filters"/>
+            <field name="filters"/>
+        </page>
     </xpath>
 </data>

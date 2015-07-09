@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part electronic_mail_template module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <!-- electronic.mail.template -->
+        <record model="ir.ui.view" id="template_view_form">
+            <field name="model">electronic.mail.template</field>
+            <field name="inherit"
+                ref="electronic_mail_template.template_view_form"/>
+            <field name="name">electronic_mail_template_form</field>
+        </record>
+
+    </data>
+</tryton>
