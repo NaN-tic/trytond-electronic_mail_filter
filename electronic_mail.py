@@ -5,7 +5,7 @@ from datetime import datetime
 
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.pool import Pool, PoolMeta
-from trytond.pyson import Bool, Eval
+from trytond.pyson import Bool, Eval, Not
 from trytond.transaction import Transaction
 
 
@@ -37,8 +37,8 @@ class ElectronicMailFilter(ModelSQL, ModelView):
     manual = fields.Boolean('Manual')
     source = fields.Text('Source',
         states={
-            'readonly': Bool(Eval('manual')) == False,
-            'required': Bool(Eval('manual')) == True,
+            'readonly': Not(Bool(Eval('manual'))),
+            'required': Bool(Eval('manual')),
             }, depends=['manual'],
         help='Available global variables:\n'
             '\tself: Instance of this model.\n'
@@ -50,7 +50,7 @@ class ElectronicMailFilter(ModelSQL, ModelView):
             ('any', 'Any'),
             ], 'Mix operator',
         states={
-            'readonly': Bool(Eval('manual')) == False,
+            'readonly': Not(Bool(Eval('manual'))),
             },
         help='Operator to mix the records obtained through the filters in the '
             'first tab and records calculated by the manual code.')
@@ -71,10 +71,10 @@ class ElectronicMailFilter(ModelSQL, ModelView):
                 'send_emails': {
                     },
                 'create_cron': {
-                    'invisible': Bool(Eval('cron')) == True,
+                    'invisible': Bool(Eval('cron')),
                     },
                 'delete_cron': {
-                    'invisible': Bool(Eval('cron')) == False,
+                    'invisible': Not(Bool(Eval('cron'))),
                     },
                 })
 
@@ -116,7 +116,7 @@ class ElectronicMailFilter(ModelSQL, ModelView):
                 'active': True,
                 'interval_number': 1,
                 'interval_type': 'days',
-                'number_calls':-1,
+                'number_calls': -1,
                 'next_call': datetime.now(),
                 'model': 'electronic.mail.filter',
                 'function': 'send_emails',
