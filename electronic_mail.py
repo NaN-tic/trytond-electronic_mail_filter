@@ -151,14 +151,55 @@ class ElectronicMailFilter(ModelSQL, ModelView):
     @classmethod
     @ModelView.button
     def send_emails(cls, filters):
-        Template = Pool().get('electronic.mail.template')
+        pool = Pool()
+        ElectronicMail = pool.get('electronic.mail')
+        EmailConfiguration = pool.get('electronic.mail.configuration')
+
+        email_configuration = EmailConfiguration(1)
+
         if isinstance(filters, int):
             filters = cls.search([
                     ('id', '=', filters),
                     ])
-        for filter_ in filters:
-            records = filter_.search_records()
-            Template.render_and_send(filter_.template.id, records)
+        emails = []
+        for fltr in filters:
+            template = fltr.template
+            records = fltr.search_records()
+            if not records:
+                continue
+
+            group_records = (getattr(template, 'single_email', False) and
+                    getattr(template, 'group_records', False))
+            if group_records:
+                records = group_records(records)
+
+            for record in records:
+                if group_records:
+                    attachments = template.get_attachments(record)
+                    record = record[0]
+                    message = template.render_message(record, attachments)
+                else:
+                    attachments = template.get_attachments([record])
+                    message = template.render(record)
+
+                if template.queue:
+                    mailbox = (template.mailbox_outbox
+                        if template.mailbox_outbox
+                        else email_configuration.outbox)
+                else:
+                    mailbox = (template.mailbox
+                        if template.mailbox
+                        else email_configuration.sent)
+
+                context = {}
+                field_expression = getattr(template, 'bcc')
+                eval_result = template.eval(field_expression, record)
+                if eval_result:
+                    context['bcc'] = eval_result
+
+                emails.append(ElectronicMail.create_from_email(message,
+                    mailbox, context))
+        ElectronicMail.send_emails(emails)
 
 
 class SearchingStart:
