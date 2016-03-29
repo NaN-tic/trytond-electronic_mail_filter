@@ -10,7 +10,6 @@ from trytond.transaction import Transaction
 
 
 __all__ = ['ElectronicMailFilter', 'SearchingStart']
-__metaclass__ = PoolMeta
 
 
 class ElectronicMailFilter(ModelSQL, ModelView):
@@ -203,6 +202,7 @@ class ElectronicMailFilter(ModelSQL, ModelView):
 
 
 class SearchingStart:
+    __metaclass__ = PoolMeta
     __name__ = 'searching.start'
 
     @staticmethod
